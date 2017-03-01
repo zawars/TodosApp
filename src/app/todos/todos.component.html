@@ -1,0 +1,36 @@
+<div style="padding-right: 50px; padding-left: 50px">
+  <h2>
+    Todo List
+  </h2>
+
+  <div *ngIf="appState == 'default'">
+    <h2>Add Todo</h2>
+    <form (submit)="addTodos()">
+      <input class="form-control" type="text" [(ngModel)]="addText" name="newTodo">
+    </form>
+  </div>
+
+  <div *ngIf="appState == 'edit'">
+    <h2>Edit Todo</h2>
+    <form (submit)="updateTodo()">
+      <input class="form-control" type="text" [(ngModel)]="addText" name="newTodo">
+    </form>
+  </div>
+
+  <ul class="list-group">
+    <li *ngFor="let todo of todos" class="list-group-item" [appHighlight]="color">
+      <span  (click)="editTodo(todo)">{{todo.text}}</span>
+      <button class="btn-small btn-danger glyphicon glyphicon-trash badge" (click)="deleteTodo(todo.text)">
+        Delete
+      </button>
+    </li>
+  </ul>
+
+  <h4>Colors:</h4>
+  <ul class="list-group">
+    <li class="list-group-item"><label><input type="radio" (click)="color='red'" name="colors" value="red"> Red</label></li>
+    <li class="list-group-item"><label><input type="radio" (click)="color='green'" name="colors" value="green"> Green</label></li>
+    <li class="list-group-item"><label><input type="radio" (click)="color='blue'" name="colors" value="blue"> Blue</label></li>
+    <li class="list-group-item"><label><input type="radio" (click)="color='black'" name="colors" value="black"> Default</label></li>
+  </ul>
+</div>
