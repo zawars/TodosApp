@@ -4,7 +4,6 @@ import {AboutComponent} from "./about/about.component";
 import {ChartComponent} from "./chart/chart.component";
 import {TodosComponent} from "./todos/todos.component";
 import {HomeComponent} from "./home/home.component";
-import {XyzComponent} from "./xyz/xyz.component";
 
 
 export const router : Routes = [
@@ -28,10 +27,6 @@ export const router : Routes = [
   {
     path: "home",
     component: HomeComponent
-  },
-  {
-    path: "xyz",
-    component: XyzComponent
   }
 ];
 

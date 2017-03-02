@@ -8,7 +8,6 @@ import { AboutComponent } from './about/about.component';
 import  {routes} from  "./app.routes";
 import { HomeComponent } from './home/home.component';
 import { HighlightDirective } from './highlight.directive';
-import { XyzComponent } from './xyz/xyz.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { XyzComponent } from './xyz/xyz.component';
     AboutComponent,
     HomeComponent,
     HighlightDirective,
-    XyzComponent,
   ],
   imports: [
     BrowserModule,
